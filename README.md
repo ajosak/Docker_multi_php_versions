@@ -27,6 +27,8 @@ $ docker-compose up
 
 3. Check the URL `localhost` in you browser, and you will catch the phpinfo with 7.2:
 
+> localhost binding www.site1.com
+
 ![](./src/docker-compose-lnmp-multi-php-version-screenshot.png)
 
 ## Preview other php version website?
