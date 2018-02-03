@@ -16,18 +16,16 @@ I myself, like the author ([copriwolf](https://github.com/copriwolf/docker-lnmp-
 
 1. Clone Project:
 ```bash
-$ git clone https://github.com/copriwolf/docker-lnmp-with-mutli-php-versions.git
+$ git clone https://github.com/ajosak/Docker_multi_php_versions.git new_folder_name
 ```
 
 2. Go into the project & Start docker compose:
 ```bash
-$ cd docker-lnmp-with-mutli-php-versions
+$ cd new_folder_name
 $ docker-compose up
 ```
 
 3. Check the URL `localhost` in you browser, and you will catch the phpinfo with 7.2:
-
-> the php7.2 site files is in `./site/site1`
 
 ![](./src/docker-compose-lnmp-multi-php-version-screenshot.png)
 
@@ -41,7 +39,7 @@ $ docker-compose up
 127.0.0.1 www.site3.com
 ```
 
-2. Then go to your browser and type `www.site2.com` or `www.site3.com`, you will catch the php5.6 & php5.3.
+2. Then go to your browser and type `www.site3.com` or `www.site5.com`, you will catch the php5.6 & php5.3.
 
 ## Create a php53/php56/php72 website?
 In fact I am using the Nginx conf file to control the version of PHP.
@@ -51,7 +49,7 @@ So you can use `fpm53:9000`/`fpm56:9000`/`fpm72:9000` to create a php53/php56/ph
 Here is a example for creating a php53 site:
 
 1. Copy a conf file from site3.conf
-> If you want to create a `php56`/`php72` site? Refer to `site2.conf`/`site1.conf`
+> If you want to create a `php56`/`php72` site? Refer to `site3.conf`/`site1.conf`
 
 ```bash
 $ cp ./conf/nginx/conf.d/site3.conf ./conf/nginx/conf.d/youDomainName.conf
